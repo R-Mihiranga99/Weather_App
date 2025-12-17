@@ -31,7 +31,7 @@ The **Weather App** lets users search for weather data by city name and view cur
 
 ## 📁 Folder Structure
 
-```text
+```
 Weather_App/
 │── index.html
 │── css/
@@ -93,6 +93,5 @@ To use your own API key:
 ---
 
 ⭐ If you like this project, feel free to **⭐ star this repo**!
-
 
 
