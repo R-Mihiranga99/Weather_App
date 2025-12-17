@@ -1,12 +1,100 @@
-# React + Vite
+# 🌤️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application that displays real-time weather information for cities around the world using the **OpenWeather API**.
 
-Currently, two official plugins are available:
+````
+````
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
 
-## Expanding the ESLint configuration
+The **Weather App** lets users search for weather data by city name and view current conditions such as temperature, weather description, humidity, wind speed, and more. It uses **JavaScript** to request data from the **OpenWeather API** and dynamically updates the UI. This web app was built to practice API integration, async programming, and responsive UI design.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Technologies Used
+
+* **HTML5** – Structure and layout
+* **CSS3** – Styling and responsive design
+* **JavaScript** – Logic, fetch API, DOM updates
+* **OpenWeather API** – Real-time weather data
+
+---
+
+## ✨ Features
+
+* 🌍 Search weather for any city worldwide
+* 📊 Real-time data from OpenWeather
+* 📱 Responsive for mobile and desktop
+* ⚡ Shows temperature, humidity, wind speed, and weather status
+* 💡 Dynamic visual updates
+
+---
+
+## 📁 Folder Structure
+
+```text
+Weather_App/
+│── index.html
+│── css/
+│   └── style.css
+│── js/
+│   └── script.js
+│── README.md
+│── screenshots/
+```
+
+---
+
+## ⚙️ How to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/R-Mihiranga99/Weather_App.git
+   ```
+2. Open `index.html` in any modern web browser.
+
+---
+
+## 📌 What I Learned
+
+* How to use **fetch API** to interact with external APIs
+* Working with **asynchronous JavaScript** (`async/await`)
+* Practical DOM manipulation
+* Building responsive interfaces using CSS
+* Handling API data and errors
+
+---
+
+## 🌱 Future Improvements
+
+* Add **autocomplete city suggestions**
+* Include **unit toggle** (°C / °F)
+* Show **5-day forecast**
+* Add icons/animations for different weather types
+
+---
+
+## 🧠 API Key Setup (Optional)
+
+To use your own API key:
+
+1. Sign up at [https://openweathermap.org](https://openweathermap.org)
+2. Replace the existing API key in `script.js` with your own
+
+---
+
+## 👤 Author
+
+**Ravindu Mihiranga**
+
+* GitHub: [https://github.com/R-Mihiranga99](https://github.com/R-Mihiranga99)
+* LinkedIn: *(Add your LinkedIn URL here)*
+
+---
+
+⭐ If you like this project, feel free to **⭐ star this repo**!
+
+```
+
+
