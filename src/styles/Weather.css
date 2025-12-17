@@ -11,7 +11,7 @@
 
 /* Gradients for different weather */
 .weather-app.default { background: linear-gradient(135deg, #1e3c72, #2a5298); }
-.weather-app.clear { background: linear-gradient(135deg, #56CCF2, #2F80ED); }
+.weather-app.clear { background: linear-gradient(135deg, #56a9f2d4, #3a84e403); }
 .weather-app.clouds { background: linear-gradient(135deg, #bdc3c7, #2c3e50); }
 .weather-app.rain { background: linear-gradient(135deg, #243B55, #141E30); }
 .weather-app.snow { background: linear-gradient(135deg, #83a4d4, #b6fbff); }
