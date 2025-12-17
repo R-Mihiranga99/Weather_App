@@ -88,7 +88,7 @@ To use your own API key:
 **Ravindu Mihiranga**
 
 * GitHub: [https://github.com/R-Mihiranga99](https://github.com/R-Mihiranga99)
-* LinkedIn: *(Add your LinkedIn URL here)*
+* LinkedIn: *(https://www.linkedin.com/in/ravindu-mihiranga-845276247/)*
 
 ---
 
