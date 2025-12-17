@@ -2,8 +2,7 @@
 
 A modern, responsive web application that displays real-time weather information for cities around the world using the **OpenWeather API**.
 
-````
-````
+---
 
 ## 🚀 Overview
 
@@ -95,6 +94,5 @@ To use your own API key:
 
 ⭐ If you like this project, feel free to **⭐ star this repo**!
 
-```
 
 
