@@ -1,200 +1,162 @@
+/* Container Backgrounds - Dynamic */
 .weather-app {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    transition: background 0.5s ease; /* Smooth color transition */
     padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #4670da 0%, #22bc6c 100%);
 }
 
+/* Gradients for different weather */
+.weather-app.default { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+.weather-app.clear { background: linear-gradient(135deg, #56CCF2, #2F80ED); }
+.weather-app.clouds { background: linear-gradient(135deg, #bdc3c7, #2c3e50); }
+.weather-app.rain { background: linear-gradient(135deg, #243B55, #141E30); }
+.weather-app.snow { background: linear-gradient(135deg, #83a4d4, #b6fbff); }
+
+/* Glassmorphism Card */
 .weather-card {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    backdrop-filter: blur(15px); /* The "Frosted Glass" effect */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    color: #000000;
+    width: 100%;
+    max-width: 500px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
+/* Search Bar Styling */
 .search-section {
-    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+    background: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    flex-grow: 1;
 }
 
 .search-bar input {
-    flex: 1;
-    height: 50px;
     border: none;
     outline: none;
-    border-radius: 25px;
-    padding: 0 20px;
-    color: #333;
-    background: rgba(255, 255, 255, 0.9);
+    background: transparent;
     font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    color: #333;
+    width: 100%;
 }
 
-.search-bar input:focus {
+.search-btn, .location-btn {
     background: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.search-bar input::placeholder {
-    color: #888;
-}
-
-.search-btn {
-    width: 50px;
-    height: 50px;
     border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
+    width: 45px;
+    height: 45px;
     cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    justify-content: center;
+    transition: transform 0.2s;
 }
 
-.search-btn:hover {
-    background: #fff;
-    transform: scale(1.05);
+.search-btn:hover, .location-btn:hover {
+    transform: scale(1.1);
 }
 
-.search-btn:active {
-    transform: scale(0.95);
-}
-
-.search-btn img {
-    width: 20px;
-    height: 20px;
-}
-
-.error-message {
-    color: #ff6b6b;
-    font-size: 14px;
+/* Header & Main Info */
+.weather-header {
     text-align: center;
-    margin-top: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px 12px;
-    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 0;
-}
-
-.loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top: 4px solid #fff;
-    animation: spin 1s linear infinite;
-    margin-bottom: 15px;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.date-label {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 .weather-main {
-    text-align: center;
-    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .weather-icon {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+    width: 100px;
+    margin-bottom: 10px;
 }
 
 .temperature {
     font-size: 64px;
     font-weight: 700;
-    margin: 10px 0;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    line-height: 1;
 }
 
 .weather-description {
-    font-size: 18px;
+    font-size: 20px;
     text-transform: capitalize;
-    margin-bottom: 15px;
-    opacity: 0.9;
 }
 
-.location-section {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.location {
-    font-size: 24px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-.weather-details {
-    display: flex;
-    justify-content: space-between;
+/* Grid for Details */
+.weather-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 15px;
+    margin-bottom: 30px;
 }
 
 .detail-card {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 15px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.detail-card img {
-    width: 30px;
-    height: 30px;
-}
-
-.detail-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.detail-value {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
+    padding: 15px;
+    text-align: center;
 }
 
 .detail-label {
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 12px;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.no-data {
-    text-align: center;
-    padding: 40px 0;
-    opacity: 0.7;
+.detail-value {
+    font-size: 18px;
+    font-weight: 600;
 }
+
+/* Forecast Section */
+.forecast-section {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.forecast-item {
+    text-align: center;
+    font-size: 14px;
+}
+
+.forecast-item img {
+    width: 40px;
+    margin: 5px 0;
+}
+
+
 
 /* Responsive design */
 @media (max-width: 500px) {
